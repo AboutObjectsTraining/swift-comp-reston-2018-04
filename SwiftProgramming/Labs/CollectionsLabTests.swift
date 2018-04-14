@@ -3,7 +3,7 @@
 // See LICENSE.txt for this example's licensing information.
 //
 import XCTest
-@testable import Shopping
+@testable import SwiftProgramming
 
 //private let sizeKey = "size"
 //private let priceKey = "price"

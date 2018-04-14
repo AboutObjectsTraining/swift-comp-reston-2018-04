@@ -18,7 +18,7 @@ func amount(item: LineItem) -> Double {
 
 typealias LineItem = (name: String, price: Double, quantity: Int)
 
-func formatted(item: LineItem) -> (String, Double) {
+func formatted(item: LineItem) -> (text: String, amount: Double) {
     let amount = calculatedAmount(item: item)
     let text = "\(item.quantity) \(item.name) at $\(item.price) = $\(amount)"
     return (text, amount)
@@ -49,3 +49,17 @@ func discount(shirt: LineItem) -> Double {
 }
 
 
+extension Array where Element == LineItem
+{
+    func formattedLineItems() -> [(String, Double)] {
+        var formattedItems: [(String, Double)] = []
+        for item in self {
+            formattedItems.append(formatted(item: item))
+        }
+        return formattedItems
+    }
+    
+    func formattedLineItems2() -> [(String, Double)] {
+        return map { formatted(item: $0) }
+    }
+}

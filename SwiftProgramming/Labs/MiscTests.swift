@@ -56,7 +56,7 @@ class MiscTests: XCTestCase
 {
     func testString() {
         let s = "Hello 🌎! 😀"
-        let indexes = s.characters.indices
+        let indexes = s.indices
         print(indexes)
         
         for i in indexes {

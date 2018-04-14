@@ -239,19 +239,19 @@ class MiscTests: XCTestCase
         // [1, 2, 3, 4, 5, 6]
         
         let a2: [Int?] = [1, nil, 2]
-        let a2Flattened = a2.flatMap { $0 }
+        let a2Flattened = a2.compactMap { $0 }
         print(a2Flattened)
         // [1, 2]
 
         let a3: [[Int]?] = [[1, 2], nil, [3, 4], [5, 6]]
-        let a3Flattened = a3.flatMap { $0 }
+        let a3Flattened = a3.compactMap { $0 }
         print(a3Flattened)
         // [[1, 2], [3, 4], [5, 6]]
         
         let a4: [[Int]?] = [[1, 2], nil, [3, 4], [5, 6]]
         let a4Flattened = a4
-            .flatMap { $0 }
-            .flatMap { $0 }
+            .compactMap { $0 }
+            .compactMap { $0 }
         print(a4Flattened)
         // [1, 2, 3, 4, 5, 6]
 

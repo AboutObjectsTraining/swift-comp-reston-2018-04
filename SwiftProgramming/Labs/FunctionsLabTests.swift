@@ -6,22 +6,14 @@ import XCTest
 let fahrenheitValues: [Double] = [-10, 0, 10, 32, 72, 100]
 let format = "\n%5.1f°F equals %5.1f°C "
 
-func convertedToCelsius(fahrenheit: Double) -> Double {
+func convertedToCelsius(fahrenheit: Double) -> Double
+{
     return (fahrenheit - 32) * (5/9)
 }
 
 
 class FunctionsLabTests: XCTestCase
 {
-    func testIntMax()
-    {
-        print(Int8.max)
-        print(UInt8.max)
-        print(Int16.max)
-        print(Int32.max)
-        print(Int64.max)
-    }
-    
     func testConvertFahrenheitToCelsiusUsingForLoop()
     {
         for value in fahrenheitValues {
