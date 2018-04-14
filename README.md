@@ -2,7 +2,7 @@
 <a href="https://www.aboutobjects.com"><img src="ao-logo.png" height=18 style="height: 18px;"/></a>
 </div>
 
-# swift-comp-reston-2017-11
+# swift-comp-reston-2018-04
 
 ## iOS Development in Swift: Comprehensive
 
@@ -15,9 +15,11 @@ Additional source code examples on GitHub:
 
 https://github.com/AboutObjectsTraining/Swift4Examples
 
+https://github.com/AboutObjectsTraining/Swift-4-Highlights
+
 ### Part 2: iOS Development in Swift (5 Days)
 
-
+https://github.com/AboutObjectsTraining/readinglist-model-swift
 
 ## Author
 
