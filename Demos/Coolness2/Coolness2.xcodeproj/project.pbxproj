@@ -13,6 +13,8 @@
 		ABFD15FA20879EEC00E8AECF /* CoolViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFD15F720879EEC00E8AECF /* CoolViewCell.swift */; };
 		ABFD15FB20879EEC00E8AECF /* CoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFD15F820879EEC00E8AECF /* CoolViewController.swift */; };
 		ABFD15FD20879F6A00E8AECF /* CoolView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABFD15FC20879F6A00E8AECF /* CoolView.xib */; };
+		ABFD15FF2088D4D000E8AECF /* CoolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFD15FE2088D4D000E8AECF /* CoolView.swift */; };
+		ABFD16012088D9A700E8AECF /* CoolViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABFD16002088D9A700E8AECF /* CoolViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		ABFD15F720879EEC00E8AECF /* CoolViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoolViewCell.swift; sourceTree = "<group>"; };
 		ABFD15F820879EEC00E8AECF /* CoolViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoolViewController.swift; sourceTree = "<group>"; };
 		ABFD15FC20879F6A00E8AECF /* CoolView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoolView.xib; sourceTree = "<group>"; };
+		ABFD15FE2088D4D000E8AECF /* CoolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolView.swift; sourceTree = "<group>"; };
+		ABFD16002088D9A700E8AECF /* CoolViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoolViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +62,9 @@
 			children = (
 				ABFD15F620879EEC00E8AECF /* AppDelegate.swift */,
 				ABFD15F720879EEC00E8AECF /* CoolViewCell.swift */,
+				ABFD15FE2088D4D000E8AECF /* CoolView.swift */,
 				ABFD15F820879EEC00E8AECF /* CoolViewController.swift */,
+				ABFD16002088D9A700E8AECF /* CoolViewCell.xib */,
 				ABFD15FC20879F6A00E8AECF /* CoolView.xib */,
 				ABFD15E520879E9500E8AECF /* Assets.xcassets */,
 				ABFD15E720879E9500E8AECF /* LaunchScreen.storyboard */,
@@ -127,6 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABFD15FD20879F6A00E8AECF /* CoolView.xib in Resources */,
+				ABFD16012088D9A700E8AECF /* CoolViewCell.xib in Resources */,
 				ABFD15E920879E9500E8AECF /* LaunchScreen.storyboard in Resources */,
 				ABFD15E620879E9500E8AECF /* Assets.xcassets in Resources */,
 			);
@@ -140,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABFD15F920879EEC00E8AECF /* AppDelegate.swift in Sources */,
+				ABFD15FF2088D4D000E8AECF /* CoolView.swift in Sources */,
 				ABFD15FA20879EEC00E8AECF /* CoolViewCell.swift in Sources */,
 				ABFD15FB20879EEC00E8AECF /* CoolViewController.swift in Sources */,
 			);

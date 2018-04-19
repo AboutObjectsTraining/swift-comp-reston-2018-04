@@ -11,13 +11,6 @@ class CoolViewController: UIViewController
         contentView.addCell(text: textField.text ?? "")
     }
     
-//    @IBAction func addCoolCell() {
-//        let newCoolCell = CoolCell()
-//        newCoolCell.text = textField.text
-//        newCoolCell.sizeToFit()
-//        contentView.addSubview(newCoolCell)
-//    }
-    
     @IBOutlet var keyboardAccessoryView: UIView!
     
     override func viewDidLoad() {
