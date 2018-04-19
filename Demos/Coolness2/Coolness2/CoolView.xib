@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CoolViewController" customModule="Coolness2" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="XCx-xp-9hl" id="EJd-wb-Qu4"/>
+                <outlet property="textField" destination="MEx-nF-M9i" id="epH-pY-CH3"/>
+                <outlet property="view" destination="Bs0-S5-77i" id="HYW-jH-QwI"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Bs0-S5-77i" userLabel="Background View">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r01-cp-bsh" userLabel="Accessory View">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter some text" textAlignment="natural" minimumFontSize="11" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="MEx-nF-M9i">
+                            <rect key="frame" x="15" y="35" width="252" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="8bp-BC-CTc"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="hIu-OW-noa"/>
+                            </connections>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABo-vE-COq">
+                            <rect key="frame" x="275" y="35" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="UIP-N6-01O"/>
+                            </constraints>
+                            <state key="normal" title="Add"/>
+                            <state key="highlighted" title="Yay"/>
+                            <connections>
+                                <action selector="addCoolView" destination="-1" eventType="touchUpInside" id="JGn-KT-YPu"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="ABo-vE-COq" firstAttribute="centerY" secondItem="MEx-nF-M9i" secondAttribute="centerY" id="5Nw-1y-dUs"/>
+                        <constraint firstItem="ABo-vE-COq" firstAttribute="leading" secondItem="MEx-nF-M9i" secondAttribute="trailing" constant="8" id="E0g-6I-5cZ"/>
+                        <constraint firstAttribute="trailingMargin" secondItem="ABo-vE-COq" secondAttribute="trailing" constant="7" id="HgE-Fb-7o0"/>
+                        <constraint firstAttribute="bottomMargin" secondItem="MEx-nF-M9i" secondAttribute="bottom" constant="7" id="KQ7-s4-4ta"/>
+                        <constraint firstItem="MEx-nF-M9i" firstAttribute="leading" secondItem="r01-cp-bsh" secondAttribute="leadingMargin" constant="7" id="Qcb-IQ-bik"/>
+                        <constraint firstAttribute="height" constant="80" id="gcp-ux-flZ"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XCx-xp-9hl" userLabel="Content View">
+                    <rect key="frame" x="0.0" y="80" width="320" height="488"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AJQ-cq-7V6" customClass="CoolViewCell" customModule="Coolness2" customModuleProvider="target">
+                            <rect key="frame" x="29" y="61" width="169" height="35"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.58105844259999995" green="0.12855249639999999" blue="0.57453137639999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="text" value="Hello Class! 🥃"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="grJ-d9-MHx" customClass="CoolViewCell" customModule="Coolness2" customModuleProvider="target">
+                            <rect key="frame" x="71" y="119" width="169" height="35"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="text" value="Beer is good. Mmmm! 🍺"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.57380741830000004" green="0.56553578380000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="r01-cp-bsh" firstAttribute="leading" secondItem="oby-vH-pG6" secondAttribute="leading" id="9h3-Ib-9p8"/>
+                <constraint firstItem="oby-vH-pG6" firstAttribute="trailing" secondItem="XCx-xp-9hl" secondAttribute="trailing" id="FdI-ys-etD"/>
+                <constraint firstItem="XCx-xp-9hl" firstAttribute="top" secondItem="r01-cp-bsh" secondAttribute="bottom" id="GDp-hT-ZfG"/>
+                <constraint firstItem="r01-cp-bsh" firstAttribute="top" secondItem="Bs0-S5-77i" secondAttribute="top" id="M31-NI-nX7"/>
+                <constraint firstItem="oby-vH-pG6" firstAttribute="bottom" secondItem="XCx-xp-9hl" secondAttribute="bottom" id="Pdr-Yx-0rk"/>
+                <constraint firstItem="XCx-xp-9hl" firstAttribute="leading" secondItem="oby-vH-pG6" secondAttribute="leading" id="R4T-Ng-Acv"/>
+                <constraint firstItem="oby-vH-pG6" firstAttribute="trailing" secondItem="r01-cp-bsh" secondAttribute="trailing" id="t4p-wm-fGc"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="oby-vH-pG6"/>
+            <point key="canvasLocation" x="100" y="-183"/>
+        </view>
+    </objects>
+</document>

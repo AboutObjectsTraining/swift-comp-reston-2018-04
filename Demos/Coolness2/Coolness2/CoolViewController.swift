@@ -10,8 +10,42 @@ class CoolViewController: UIViewController
         newCell.text = textField.text
         contentView.addSubview(newCell)
     }
+}
+
+// MARK: - UITextFieldDelegate methods
+extension CoolViewController: UITextFieldDelegate
+{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}
+
+
+// MARK: - View loading
+extension CoolViewController
+{
+    // TODO: Delete me (if we're not using loadView4)
+    static let nib = UINib(nibName: "CoolView", bundle: nil)
     
-    func loadView1() {
+    func loadView4() {
+        CoolViewController.nib.instantiate(withOwner: self, options: nil)
+    }
+    
+    func loadView3() {
+        Bundle.main.loadNibNamed("CoolView", owner: self, options: nil)
+    }
+    
+    func loadView2() {
+        guard
+            let topLevelObjs = Bundle.main.loadNibNamed("CoolView", owner: nil, options: nil),
+            let myView = topLevelObjs.first as? UIView else { return }
+        
+        view = myView
+    }
+    
+
+     func loadView1() {
         view = UIView(frame: UIScreen.main.bounds)
         view.backgroundColor = UIColor.brown
         
