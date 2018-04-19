@@ -13,7 +13,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CoolViewController" customModule="Coolness2" customModuleProvider="target">
             <connections>
-                <outlet property="contentView" destination="XCx-xp-9hl" id="EJd-wb-Qu4"/>
+                <outlet property="coolView" destination="XCx-xp-9hl" id="EJd-wb-Qu4"/>
                 <outlet property="textField" destination="MEx-nF-M9i" id="epH-pY-CH3"/>
                 <outlet property="view" destination="Bs0-S5-77i" id="HYW-jH-QwI"/>
             </connections>
@@ -60,7 +60,7 @@
                         <constraint firstAttribute="height" constant="80" id="gcp-ux-flZ"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XCx-xp-9hl" userLabel="Content View">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XCx-xp-9hl" userLabel="Cool View" customClass="CoolView" customModule="Coolness2" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="80" width="320" height="488"/>
                     <subviews>
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AJQ-cq-7V6" customClass="CoolViewCell" customModule="Coolness2" customModuleProvider="target">
