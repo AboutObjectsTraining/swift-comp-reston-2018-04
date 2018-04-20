@@ -42,21 +42,29 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="r18-gK-NEH" kind="show" id="lrq-PU-TGB"/>
+                                    <segue destination="r18-gK-NEH" kind="show" identifier="View Book" id="lrq-PU-TGB"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
                         <connections>
-                            <outlet property="dataSource" destination="0cP-uH-u6g" id="c2a-JY-n7B"/>
+                            <outlet property="dataSource" destination="cPc-A4-BLJ" id="a5l-hq-bZq"/>
                             <outlet property="delegate" destination="0cP-uH-u6g" id="IB9-xl-132"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Reading List" largeTitleDisplayMode="always" id="HiI-rg-uBO">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="OVg-q2-w9r"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="OVg-q2-w9r">
+                            <connections>
+                                <segue destination="hvR-hQ-bCa" kind="presentation" identifier="Add Book" id="5mS-ba-b3Y"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="dataSource" destination="cPc-A4-BLJ" id="Gmc-D0-hsP"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SFo-x4-g8R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="cPc-A4-BLJ" customClass="ReadingListDataSource" customModule="ReadingList" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="-70" y="92"/>
         </scene>
@@ -65,7 +73,7 @@
             <objects>
                 <navigationController id="6oE-6I-yMp" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="5fN-qn-vNr">
-                        <rect key="frame" x="0.0" y="20" width="320" height="96"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="93"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -83,6 +91,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rK8-iG-QQ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="592" y="91"/>
+        </scene>
+        <!--AddBook-->
+        <scene sceneID="8DT-SQ-JHk">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddBook" id="hvR-hQ-bCa" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xcO-AQ-BRP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="913" y="-389"/>
         </scene>
     </scenes>
 </document>

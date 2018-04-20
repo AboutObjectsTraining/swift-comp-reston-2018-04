@@ -1,24 +1,48 @@
 import UIKit
+import ReadingListModel
 
 class ReadingListController: UITableViewController
 {
-    @IBAction func doneEditing(segue: UIStoryboardSegue) {
-        print("In \(#function)")
+    @IBOutlet var dataSource: ReadingListDataSource!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        dataSource.load()
+        navigationItem.leftBarButtonItem = editButtonItem
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        switch segue.identifier ?? "" {
+        case "View Book":
+            if
+                let indexPath = tableView.indexPathForSelectedRow,
+                let controller = segue.realDestination as? BookDetailController {
+                controller.book = dataSource.book(at: indexPath)
+            }
+        case "Add Book":
+            if let controller = segue.realDestination as? AddBookController {
+                controller.completionHandler = { book in self.add(book: book) }
+            }
+        default: break
+        }
+    }
+    
+    func add(book: Book) {
+        dataSource.insertBook(book: book, at: IndexPath(row: 0, section: 0))
+        dataSource.save()
+        tableView.reloadData()
     }
 }
 
-// MARK: - UITableViewDataSource methods
+// MARK: - Unwind segues
 extension ReadingListController
 {
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 100
+    @IBAction func doneEditing(segue: UIStoryboardSegue) {
+        tableView.reloadData()
+        dataSource.save()
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Book Summary") else {
-            fatalError("Make sure the reuse identifier is set in the storyboard or nib file")
-        }
-        cell.textLabel?.text = "Row \(indexPath.row)"
-        return cell
-    }
+    @IBAction func doneAdding(segue: UIStoryboardSegue) { }
+    @IBAction func cancelAdding(segue: UIStoryboardSegue) { }
 }

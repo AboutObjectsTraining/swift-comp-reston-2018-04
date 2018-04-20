@@ -5,9 +5,11 @@
 import Foundation
 
 open class ReadingList: ModelObject
-{    
-    public static let titleKey = "title"
-    public static let booksKey = "books"
+{
+    public struct Keys {
+        public static let title = "title"
+        public static let books = "books"
+    }
     
     @objc open var title = ""
     @objc open var books = [Book]()
@@ -21,12 +23,12 @@ open class ReadingList: ModelObject
     }
     
     open override class var keys: [String] {
-        return [titleKey, booksKey]
+        return [Keys.title, Keys.books]
     }
     
     open override func setValue(_ value: Any?, forKey key: String) {
         var books: [Book]?
-        if key == ReadingList.booksKey, let dicts = value as? [[String: Any]] {
+        if key == Keys.books, let dicts = value as? [[String: Any]] {
             books = dicts.map { Book(dictionary: $0) }
         }
         super.setValue(books ?? value, forKey: key)
@@ -34,8 +36,8 @@ open class ReadingList: ModelObject
     
     open override func dictionaryRepresentation() -> [String: Any] {
         var dict = super.dictionaryRepresentation()
-        if let books = dict[ReadingList.booksKey] as? [ModelObject] {
-            dict[ReadingList.booksKey] = books.map { $0.dictionaryRepresentation() }
+        if let books = dict[Keys.books] as? [ModelObject] {
+            dict[Keys.books] = books.map { $0.dictionaryRepresentation() }
         }
         return dict
     }
